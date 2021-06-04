@@ -50,8 +50,8 @@ function position(val) {
   src.stop()
   start = map(val, 1,1000,1,src.buffer.duration)
   updateBuff()
-  src.loopStart = map(val, 1,1000,1,src.buffer.duration)
-  src.loopEnd = Math.min(src.loopStart + end, src.buffer.duration)
+  src.loopStart = start
+  src.loopEnd = Math.min(start + end, src.buffer.duration)
   src.loop = true
 }
 
@@ -59,6 +59,7 @@ function length(val) {
   src.stop()
   updateBuff()
   end = map(val, 1,1000,0,1)
-  src.loopEnd = src.loopStart + end
+  src.loopStart = start
+  src.loopEnd = start + end
   src.loop = true
 }
