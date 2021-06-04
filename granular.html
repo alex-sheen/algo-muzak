@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AlgoMuzak - Granular Synthesizer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section></section>
+
+    <p>Position:</p>
+    <input type="range" min="1" max="1000" value="510" class="slider" id="position"
+    oninput="position(this.value)" onchange="position(this.value)">
+
+    <p>Length:</p>
+    <input type="range" min="1" max="1000" value="500" class="slider" id="length"
+    oninput="position(this.value)" onchange="length(this.value)">
+
+    Link to explanation of granular synthesizers <a href="https://youtu.be/ANkb_PG-3X0">here.</a>
+
+    <br>
+    <br>
+
+    The position slider changes the playback start position. The length slider changes the size of the grain, or the length of the looped portion.
+
+    <br>
+    <br>
+
+    Try moving the length slider slowly towards the left!
+    <script src="js/waveCanvas.js"></script>
+    <script src="js/createBufferCanvas.js"></script>
+    <script src="js/granular.js"></script>
+  </body>
+</html>
